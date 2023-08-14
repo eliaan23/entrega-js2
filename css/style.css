@@ -1,9 +1,9 @@
-body{
+body {
     margin: 0px;
 }
 
 /*navbar*/
-.nav-container{
+.nav-container {
     position: sticky;
     z-index: 3;
     top: 0;
@@ -38,6 +38,7 @@ body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url("https://images.unsplash.com/photo-1591183843088-8ea6a3470843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1678&q=80");
 }
+
 .banner-container {
     text-align: center;
     padding: 15% 0;
@@ -72,7 +73,7 @@ body{
     max-width: 300px;
     margin: auto;
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: arial;
     margin: 10px;
 }
 
@@ -95,7 +96,7 @@ body{
     text-align: center;
     cursor: pointer;
     width: 100%;
-    font: 18px;
+    font-size: 18px;
 }
 
 .card button:hover {
@@ -104,7 +105,7 @@ body{
 
 /*modal content*/
 .modal-container {
-    width: 500px;
+    width: 80%;
     margin: 0 10%;
     max-height: 88vh;
     color: #fff;
@@ -144,7 +145,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    width: 70px;
+    width: 70%;
     margin: 10px;
 }
 
@@ -158,4 +159,51 @@ body{
     padding: 20px;
     text-align: center;
     padding-top: 20px;
+}
+
+/*se agregaron unas lineas de css con media querys para que se adapte mejor al responsive */
+
+@media only screen and (max-width: 750px) {
+    .modal-container {
+    width: 100%;
+    margin: 0;
+    min-height: 88vh;
+    }
+
+    .modal-container > .modal-content {
+    justify-content: space-between;
+    width: 100%;
+    margin: 2px;
+    }
+
+    .modal-container > div > img {
+    height: 80px;
+    width: 80px;
+    }
+}
+
+/*delete button product*/
+.delete-product {
+    cursor: pointer;
+}
+
+/*CarritoCounter*/
+.cantidad-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 37px;
+    right: 14px;
+    position: absolute;
+    display: none;
+}
+
+.sumar {
+    cursor: pointer;
+}
+
+.restar {
+    cursor: pointer;
 }
